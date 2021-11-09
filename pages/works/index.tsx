@@ -1,14 +1,6 @@
 import Layout from '@/components/common/Layout';
-import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
-export default function Works({}: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <div>Works</div>;
+export default function Works() {
+  return <div style={{height: '500px'}}>Updating...</div>;
 }
 
 Works.Layout = Layout;
-
-export async function getStaticProps({ preview, locale, locales }: GetStaticPropsContext) {
-  return {
-    props: {},
-    revalidate: 60,
-  };
-}

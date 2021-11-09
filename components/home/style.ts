@@ -140,19 +140,17 @@ const Box = styled.div`
   margin-top: 3rem;
 `;
 
-const ButtonWork = styled.button`
+const ButtonWork = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
 
-  height: 3.2rem;
+  height: 3.5rem;
   width: 18rem;
   max-width: 100%;
   margin: 1.5rem auto 0;
 
   border-radius: 5px;
-  border: none;
-  cursor: pointer;
 
   font-size: 1.6rem;
   font-weight: 700;
@@ -231,8 +229,23 @@ const ContactIcon = styled.div`
   border-radius: 50%;
   margin-right: 1.2rem;
 
-  color: ${({ theme }) => theme.mode === 'dark' ? '#444' : '#eee'};
+  color: ${({ theme }) => (theme.mode === 'dark' ? '#444' : '#eee')};
   background-color: ${({ theme }) => theme.global.colorContrast};
+`;
+
+const Icons = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1rem 2rem;
+  a {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 `;
 
 export {
@@ -251,5 +264,6 @@ export {
   List,
   BioListItem,
   ContactItem,
-  ContactIcon
+  ContactIcon,
+  Icons,
 };

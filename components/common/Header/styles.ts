@@ -56,7 +56,7 @@ const LogoText = styled.h1`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    animation: ${anime} 3s linear infinite;
+    animation: ${anime} 2s linear infinite;
   }
 `;
 

@@ -13,6 +13,7 @@ import {
   ContactIcon,
   ContactItem,
   Contents,
+  Icons,
   InfoDesc,
   InfoName,
   List,
@@ -47,9 +48,9 @@ const HomePage: FC = () => {
             Responsive websites built for an optimal user experience that achieves of business
             goals. Make website fast, easy to find, and reach the widest audience possible.
           </Text>
-          <ButtonWork title='view my portfolio' onClick={() => router.push('/works')}>
-            My portfolio
-          </ButtonWork>
+          <Link href='/works' passHref>
+            <ButtonWork title='view my portfolio'>My works</ButtonWork>
+          </Link>
         </Box>
         <Box>
           <TitleCate>Bio</TitleCate>
@@ -118,6 +119,23 @@ const HomePage: FC = () => {
               </div>
             </ContactItem>
           </List>
+          <Icons>
+            <Link href='https://www.youtube.com/c/saulvo' passHref>
+              <a target='_blank' title='Youtube channel'>
+                <Image src='/icon-yt.png' alt='Youtube channel' width={30} height={30} />
+              </a>
+            </Link>
+            <Link href='https://t.me/Son_Growth_IT' passHref>
+              <a target='_blank' title='Telegram'>
+                <Image src='/icon-te.png' alt='Telegram' width={30} height={30} />
+              </a>
+            </Link>
+            <Link href='https://www.linkedin.com/in/saulvo/' passHref>
+              <a target='_blank' title='Linkedin'>
+                <Image src='/icon-linkedin.png' alt='Linkedin' width={30} height={30} />
+              </a>
+            </Link>
+          </Icons>
         </Box>
       </Contents>
     </Wrapper>
