@@ -124,9 +124,9 @@ const BtnToggleTheme = styled.button`
   font-size: 13px;
   border: none;
   color: inherit;
-  background-color: ${({ theme }) => (theme.mode === 'dark' ? '#333' : '#e4e4e4')};
+  background-color: ${({ theme }) => (theme.mode === 'dark' ? '#333' : '#888')};
 
-  .fa-sun {
+  svg {
     color: yellow;
   }
   span {

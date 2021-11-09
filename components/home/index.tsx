@@ -49,7 +49,7 @@ const HomePage: FC = () => {
             goals. Make website fast, easy to find, and reach the widest audience possible.
           </Text>
           <Link href='/works' passHref>
-            <ButtonWork title='view my portfolio'>My works</ButtonWork>
+            <ButtonWork target="_self" >My works</ButtonWork>
           </Link>
         </Box>
         <Box>
@@ -108,7 +108,7 @@ const HomePage: FC = () => {
                 <FontAwesomeIcon icon={faGlobe} className='icon' />
               </ContactIcon>
               <div>
-                <Link href='>https://github.com/sonvt-fe'>
+                <Link href='https://github.com/sonvt-fe'>
                   <a target='_blank' title='Github'>
                     https://github.com/sonvt-fe
                   </a>

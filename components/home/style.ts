@@ -208,9 +208,6 @@ const ContactItem = styled.li`
   a {
     display: block;
   }
-  span {
-    font-weight: 500;
-  }
   a {
     transition: all 0.25s;
     &:hover {
@@ -229,19 +226,33 @@ const ContactIcon = styled.div`
   border-radius: 50%;
   margin-right: 1.2rem;
 
-  color: ${({ theme }) => (theme.mode === 'dark' ? '#444' : '#eee')};
-  background-color: ${({ theme }) => theme.global.colorContrast};
+  background-color: #eee;
+  .fa-id-card {
+    color: #29d;
+  }
+
+  .fa-map-marker-alt {
+    color: red;
+  }
+
+  .fa-globe {
+    color: green;
+  }
 `;
 
 const Icons = styled.div`
   display: flex;
   flex-flow: row wrap;
-  padding: 1rem 2rem;
+  padding: 1rem;
+
+  @media (min-width: 415px) {
+    padding: 1.5rem 2rem 1rem;
+  }
   a {
     display: block;
     width: 3rem;
     height: 3rem;
-    margin-right: 1rem;
+    margin-right: 1.2rem;
     &:hover {
       opacity: 0.8;
     }
