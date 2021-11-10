@@ -8,6 +8,10 @@ export const NAVS = [
     uri: '/posts',
   },
   {
+    name: 'Videos',
+    uri: '/videos',
+  },
+  {
     name: 'Github',
     uri: 'https://github.com/sonvt-fe',
   },
