@@ -1,6 +1,7 @@
 import Layout from '@/components/common/Layout';
+import PostsPage from '@/components/posts';
 export default function Posts() {
-  return <div style={{height: '500px'}}>Updating...</div>;
+  return <PostsPage />;
 }
 
 Posts.Layout = Layout;

@@ -1,6 +1,7 @@
 import Layout from '@/components/common/Layout';
+import WorksPage from '@/components/works';
 export default function Works() {
-  return <div style={{height: '500px'}}>Updating...</div>;
+  return <WorksPage />;
 }
 
 Works.Layout = Layout;

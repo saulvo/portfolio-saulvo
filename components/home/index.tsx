@@ -1,6 +1,7 @@
 import { BIO_LIST } from '@/contants/home';
 import { faGlobe, faIdCard, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -30,6 +31,7 @@ const HomePage: FC = () => {
 
   return (
     <Wrapper>
+      <NextSeo title='Saul Vo - Homepage' description='Saul Vo' />
       <ShortDesc>{"Hello, I'm a junior frontend developer in VietNam!"}</ShortDesc>
       <Profile>
         <Avatar>
@@ -49,7 +51,7 @@ const HomePage: FC = () => {
             goals. Make website fast, easy to find, and reach the widest audience possible.
           </Text>
           <Link href='/works' passHref>
-            <ButtonWork target="_self" >My works</ButtonWork>
+            <ButtonWork target='_self'>My works</ButtonWork>
           </Link>
         </Box>
         <Box>

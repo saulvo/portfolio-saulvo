@@ -87,10 +87,10 @@ const Nav = styled.nav`
       filter: ${({ theme }) => (theme.mode === 'dark' ? 'invert(100%)' : 'invert(0)')};
     }
   }
-  @media (min-width: 481px) {
+  @media (min-width: 576px) {
     margin-left: 30px;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 575px) {
     position: absolute;
     top: ${({ active }) => (active ? 'calc(100% + 5px)' : '-200px')};
     right: 10px;
@@ -160,7 +160,7 @@ const BtnMenu = styled.button`
   font-size: 25px;
   color: inherit;
   background-color: transparent;
-  @media (min-width: 481px) {
+  @media (min-width: 576px) {
     display: none;
   }
 `;

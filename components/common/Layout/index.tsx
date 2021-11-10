@@ -1,5 +1,6 @@
 import Theme from '@/components/common/Theme';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 import React, { FC } from 'react';
 import { Container } from '../styles';
 
@@ -19,13 +20,19 @@ const TopProgressBar = dynamic(
 const Snowfall = dynamic(() => import('../Snowfall'), { ssr: false });
 
 const Layout: FC = ({ children }) => {
+  const router = useRouter();
+
   return (
     <Theme>
       <TopProgressBar />
       <Header />
       <main>
-        <Snowfall />
-        <PlanesModel />
+        {router.pathname !== '/404' && (
+          <>
+            <Snowfall />
+            <PlanesModel />
+          </>
+        )}
         <Container>{children}</Container>
       </main>
       <Footer />

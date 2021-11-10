@@ -1,4 +1,5 @@
 import { TitlePage } from '@/components/common/styles';
+import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
@@ -12,6 +13,7 @@ const VideosPage: FC<Props> = ({ videoList }) => {
 
   return (
     <Wrapper>
+      <NextSeo title='Videos - Saul Vo' description="Videos's Saul Vo" />
       <TitlePage>Videos</TitlePage>
       <Row>
         {rows.length > 0 &&
