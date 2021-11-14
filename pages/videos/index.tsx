@@ -17,6 +17,5 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     props: {
       videoList,
     },
-    revalidate: 600,
   };
 }
