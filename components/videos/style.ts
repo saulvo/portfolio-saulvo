@@ -16,7 +16,7 @@ const Col = styled.div`
   margin: 0 0.5rem 2rem;
 
   @media (min-width: 481px) {
-    width: calc(100% / 3 - 0.5rem);
+    width: calc(100% / 3 - 1rem);
   }
 
   > a {

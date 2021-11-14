@@ -12,10 +12,11 @@ Videos.Layout = Layout;
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const videoList = await api.getPlaylistById('PLw46C1_ab136VIukkG2lGQK2jlakNVUsO');
-  
+
   return {
     props: {
       videoList,
     },
+    revalidate: 600,
   };
 }
