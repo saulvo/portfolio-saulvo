@@ -4,7 +4,6 @@ const { stringify } = require('query-string');
 const baseURL = 'https://www.googleapis.com/youtube/v3';
 
 export const getPlaylistById = async (playlistId: string) => {
-  console.log('key', process.env.NEXT_PUBLIC_API_KEY);
   const params = {
     playlistId: playlistId,
     maxResults: 50,

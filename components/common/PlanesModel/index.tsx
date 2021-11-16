@@ -1,5 +1,6 @@
 import { OrbitControls } from '@react-three/drei';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
+import { useRouter } from 'next/router';
 import { FC, Suspense, useEffect, useRef, useState } from 'react';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Button, Container } from './styles';
@@ -16,6 +17,7 @@ const Model: FC = () => {
 };
 
 const PlanesModel: FC = () => {
+  const router = useRouter();
   const [zoom, setZoom] = useState<boolean>(false);
 
   useEffect(() => {
@@ -32,6 +34,11 @@ const PlanesModel: FC = () => {
       html.style.overflow = '';
     };
   }, [zoom]);
+
+  useEffect(() => {
+    setZoom(false);
+  }, [router.pathname]);
+
   return (
     <>
       <Container z={zoom}>
