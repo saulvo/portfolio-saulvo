@@ -35,7 +35,7 @@ const HomePage: FC = () => {
       <ShortDesc>{"Hello, I'm a junior frontend developer in VietNam!"}</ShortDesc>
       <Profile>
         <Avatar>
-          <Image src={'/avatar.jpg'} alt='Võ Thanh Sơn' width={140} height={140} />
+          <Image src={'/avatar.jpg'} alt='Võ Thanh Sơn' priority={true} width={140} height={140} />
         </Avatar>
         <ProInfo>
           <InfoName>Võ Thanh Sơn</InfoName>
