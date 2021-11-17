@@ -6,7 +6,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 function Theme({ children }) {
   const theme = useTheme((state: ThemeState) => state.theme);
-  const [currentTheme, setCurrentTheme] = useState('light');
+  const [currentTheme, setCurrentTheme] = useState('dark');
 
   useEffect(() => {
     setCurrentTheme(theme);
