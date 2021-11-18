@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { FC } from 'react';
 import {
   Avatar,
@@ -27,8 +26,6 @@ import {
 } from './style';
 
 const HomePage: FC = () => {
-  const router = useRouter();
-
   return (
     <Wrapper>
       <NextSeo title='Saul Vo - Homepage' description='Saul Vo' />
@@ -99,7 +96,7 @@ const HomePage: FC = () => {
               <div>
                 <span>Ho Chi Minh City</span>
                 <Link href='https://goo.gl/maps/mqhJa4VbFWUt16za7' passHref>
-                  <a target='_blank' title='Address'>
+                  <a target='_blank' rel='noopener' title='Address'>
                     38 Duong Duc Hien, Tan Phu District
                   </a>
                 </Link>
@@ -111,29 +108,31 @@ const HomePage: FC = () => {
               </ContactIcon>
               <div>
                 <Link href='https://github.com/sonvt-fe'>
-                  <a target='_blank' title='Github'>
+                  <a target='_blank' rel='noopener' title='Github'>
                     https://github.com/sonvt-fe
                   </a>
                 </Link>
                 <Link href='http://sonvt.epizy.com'>
-                  <a title='Website'>http://sonvt.epizy.com</a>
+                  <a target='_blank' rel='noopener' title='Website'>
+                    http://sonvt.epizy.com
+                  </a>
                 </Link>
               </div>
             </ContactItem>
           </List>
           <Icons>
             <Link href='https://www.youtube.com/c/saulvo' passHref>
-              <a target='_blank' title='Youtube channel'>
+              <a target='_blank' rel='noopener' title='Youtube channel'>
                 <Image src='/icon-yt.png' alt='Youtube channel' width={30} height={30} />
               </a>
             </Link>
             <Link href='https://t.me/Son_Growth_IT' passHref>
-              <a target='_blank' title='Telegram'>
+              <a target='_blank' rel='noopener' title='Telegram'>
                 <Image src='/icon-te.png' alt='Telegram' width={30} height={30} />
               </a>
             </Link>
             <Link href='https://www.linkedin.com/in/saulvo/' passHref>
-              <a target='_blank' title='Linkedin'>
+              <a target='_blank' rel='noopener' title='Linkedin'>
                 <Image src='/icon-linkedin.png' alt='Linkedin' width={30} height={30} />
               </a>
             </Link>

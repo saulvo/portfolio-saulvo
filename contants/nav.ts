@@ -11,8 +11,4 @@ export const NAVS = [
     name: 'Videos',
     uri: '/videos',
   },
-  {
-    name: 'Github',
-    uri: 'https://github.com/sonvt-fe',
-  },
 ];

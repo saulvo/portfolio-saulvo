@@ -6,7 +6,7 @@ const baseURL = 'https://www.googleapis.com/youtube/v3';
 export const getPlaylistById = async (playlistId: string) => {
   const params = {
     playlistId: playlistId,
-    maxResults: 50,
+    maxResults: 10,
     part: 'snippet',
     key: process.env.NEXT_PUBLIC_API_KEY,
   };

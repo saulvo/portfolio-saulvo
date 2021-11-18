@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
-import { Col, Row, Wrapper } from './style';
+import { Button, Col, Row, Wrapper } from './style';
 
 interface Props {
   videoList: {
@@ -28,7 +28,7 @@ const VideosPage: FC<Props> = ({ videoList }) => {
           rows.map((video) => (
             <Col key={video.id}>
               <Link href={video.url} passHref>
-                <a target='_blank'>
+                <a target='_blank' rel='noopener'>
                   <Image src={video.photo} width={480} height={360} alt={video.title} />
                   <h3>{video.title}</h3>
                 </a>
@@ -36,6 +36,13 @@ const VideosPage: FC<Props> = ({ videoList }) => {
             </Col>
           ))}
       </Row>
+      {rows.length >= 5 && (
+        <Link href='https://www.youtube.com/c/SaulVo/videos' passHref>
+          <Button target='_blank' rel='noopener' title='view more'>
+            View more
+          </Button>
+        </Link>
+      )}
     </Wrapper>
   );
 };

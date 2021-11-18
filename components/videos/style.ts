@@ -17,6 +17,9 @@ const Col = styled.div`
 
   @media (min-width: 481px) {
     width: calc(100% / 3 - 1rem);
+    &:nth-child(10) {
+      display: none;
+    }
   }
 
   > a {
@@ -38,4 +41,18 @@ const Col = styled.div`
   }
 `;
 
-export { Wrapper, Row, Col };
+const Button = styled.a`
+  display: block;
+  width: max-content;
+  border-radius: 3px;
+  margin: 1rem auto 0;
+  padding: 0.6rem 1.2rem;
+
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  color: #fff;
+  background: linear-gradient(45deg, #ff4e00, #ff253a);
+`;
+
+export { Wrapper, Row, Col, Button };

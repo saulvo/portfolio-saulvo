@@ -4,12 +4,12 @@ import { ThemeState } from '@/modals/theme';
 import { useTheme } from '@/stores';
 import { faBars, faMoon, faSun, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FC, useEffect, useRef, useState } from 'react';
 import Logo from '../Logo';
 import { BtnMenu, BtnToggleTheme, InnerWrapper, LogoText, Nav, WrapLogo, Wrapper } from './styles';
-import Image from 'next/image';
 
 const Header: FC = () => {
   const { width } = useWindowSize();
@@ -57,13 +57,18 @@ const Header: FC = () => {
             <Link key={idx} href={item.uri} passHref>
               <a
                 onClick={() => setOpenMenu(false)}
-                className={router.pathname === item.uri ? 'active' : ''}
-                target={item.name === 'Github' ? '_blank' : '_self'}>
-                {item.name === 'Github' && <Image src='/icon-git.png' alt={item.name} width={16} height={16} />}
+                className={router.pathname === item.uri ? 'active' : ''}>
                 {item.name}
               </a>
             </Link>
           ))}
+
+          <Link href='https://github.com/sonvt-fe' passHref>
+            <a onClick={() => setOpenMenu(false)} target='_blank' rel='noopener'>
+              <Image src='/icon-git.png' alt='Github' width={16} height={16} />
+              Github
+            </a>
+          </Link>
         </Nav>
         <BtnToggleTheme onClick={handleButtonThemeClick} title='change theme'>
           <FontAwesomeIcon icon={faSun} />
