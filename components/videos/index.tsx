@@ -36,7 +36,7 @@ const VideosPage: FC<Props> = ({ videoList }) => {
             </Col>
           ))}
       </Row>
-      {rows.length >= 5 && (
+      {rows.length >= 10 && (
         <Link href='https://www.youtube.com/c/SaulVo/videos' passHref>
           <Button target='_blank' rel='noopener' title='view more'>
             View more
